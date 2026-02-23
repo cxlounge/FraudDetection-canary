@@ -13,6 +13,9 @@ app = Flask(__name__)
 
 password = "my1obvious_P@ssword2"
 
+password_canary = "my1obvious_P@ssword3"
+
+
 # Request context setup
 request_id = LocalProxy(lambda: getattr(_request_ctx_stack.top, "request_id", None))
 
