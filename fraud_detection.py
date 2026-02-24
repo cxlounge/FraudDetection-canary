@@ -11,7 +11,7 @@ from models.fraud_model import FraudModel
 
 app = Flask(__name__)
 
-password = "my1obvious_P@ssword2"
+os.environ["my-token"] = "Cx33456!zdefs3"
 
 # Request context setup
 request_id = LocalProxy(lambda: getattr(_request_ctx_stack.top, "request_id", None))
