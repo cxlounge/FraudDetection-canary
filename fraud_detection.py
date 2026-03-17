@@ -13,7 +13,10 @@ app = Flask(__name__)
 
 password = "my1obvious_P@ssword2"
 
-password_canary = "my1obvious_P@ssword3"
+# Load password_canary from environment variable for security
+password_canary = os.getenv('PASSWORD_CANARY', None)
+if password_canary is None:
+    raise ValueError("PASSWORD_CANARY environment variable must be set for security purposes")
 
 
 # Request context setup
